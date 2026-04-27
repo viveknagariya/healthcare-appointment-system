@@ -1,0 +1,306 @@
+.adm-portal-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url("../../images/img6.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: "Inter", sans-serif;
+}
+
+.adm-login-container {
+  max-width: 550px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(25px);
+  padding: 60px 50px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 25px 60px rgba(26, 31, 44, 0.15);
+}
+
+.adm-login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.adm-main-title {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #1A1F2C;
+  margin: 12px 0 5px;
+}
+
+.adm-sub-text {
+  font-size: 14px;
+  color: #6C757D;
+  font-weight: 500;
+}
+
+.adm-input-group {
+  margin-bottom: 22px;
+}
+
+.adm-field-label {
+  display: block;
+  font-weight: 800;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #1A1F2C;
+  text-align: left;
+}
+
+.adm-input-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.adm-input-control input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid rgba(26, 31, 44, 0.12);
+  font-weight: 900;
+  font-size: 18px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.85);
+  transition: all 0.3s ease;
+  color: #1A1F2C;
+}
+
+.adm-input-control input::placeholder {
+  color: #6C757D;
+}
+
+.adm-input-control input:focus {
+  border-color: #1A1F2C;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(26, 31, 44, 0.05);
+}
+
+.adm-submit-btn2 {
+  width: 100%;
+  padding: 18px;
+  background: #1A1F2C;
+  color: #fff;
+  border-radius: 14px;
+  font-weight: 900;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+}
+
+.adm-register-option {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #1A1F2C;
+}
+
+.adm-register-link {
+  color: #1A1F2C;
+  font-weight: 800;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.adm-register-link:hover {
+  text-decoration: underline;
+}
+
+.adm-notification-toast {
+  position: fixed;
+  top: 95px;
+  right: 25px;
+  width: 340px;
+  padding: 18px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 10000;
+  box-shadow: 0 15px 35px rgba(26, 31, 44, 0.25);
+  animation: slideInRight 0.4s ease-out;
+  overflow: hidden;
+}
+
+.adm-toast-close {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.error-variant {
+  background: #0b1f5c !important;
+  color: #fff !important;
+}
+
+.success-variant {
+  background: #0b1f5c !important;
+  color: #fff !important;
+}
+
+.toast-timer-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: #ffffff;
+  width: 100%;
+}
+
+.run-5s {
+  animation: progressTimer 5s linear forwards;
+}
+
+@keyframes progressTimer {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .adm-portal-wrapper {
+    padding: 20px 15px;
+  }
+  .adm-login-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 45px 35px;
+  }
+  .adm-main-title {
+    font-size: 32px;
+  }
+  .adm-sub-text {
+    font-size: 15px;
+  }
+  .adm-field-label {
+    font-size: 15px;
+  }
+  .adm-input-control input {
+    padding: 14px;
+    font-size: 16px;
+  }
+  .adm-submit-btn2 {
+    padding: 16px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .adm-portal-wrapper {
+    padding: 15px;
+    background-attachment: scroll;
+  }
+  .adm-login-container {
+    max-width: 100%;
+    padding: 40px 25px;
+    border-radius: 20px;
+  }
+  .adm-main-title {
+    font-size: 28px;
+  }
+  .adm-sub-text {
+    font-size: 14px;
+  }
+  .adm-field-label {
+    font-size: 14px;
+  }
+  .adm-input-group {
+    margin-bottom: 20px;
+  }
+  .adm-input-control input {
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 12px;
+  }
+  .adm-submit-btn2 {
+    padding: 14px;
+    font-size: 15px;
+    border-radius: 12px;
+  }
+  .adm-register-option {
+    font-size: 13px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .adm-portal-wrapper {
+    padding: 10px;
+  }
+  .adm-login-container {
+    max-width: 100%;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 40px rgba(26, 31, 44, 0.1);
+  }
+  .adm-main-title {
+    font-size: 24px;
+    margin: 8px 0 2px;
+  }
+  .adm-sub-text {
+    font-size: 13px;
+  }
+  .adm-input-group {
+    margin-bottom: 16px;
+  }
+  .adm-field-label {
+    font-size: 13px;
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+  .adm-input-control input {
+    padding: 11px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+  .adm-input-control input::placeholder {
+    font-size: 13px;
+  }
+  .adm-submit-btn2 {
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-top: 12px;
+  }
+  .adm-register-option {
+    font-size: 12px;
+    margin-top: 12px;
+  }
+  .adm-register-link {
+    font-size: 12px;
+  }
+  .adm-notification-toast {
+    width: calc(100% - 20px);
+    right: 10px;
+    top: 75px;
+    padding: 14px;
+    font-size: 13px;
+  }
+}

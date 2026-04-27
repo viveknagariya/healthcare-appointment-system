@@ -1,0 +1,265 @@
+.adm-inq-wrapper {
+  padding: 30px;
+  background-color: #F8F9FA;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+.adm-inq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
+.adm-inq-title-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.adm-inq-title-box h2 {
+  font-size: 26px;
+  font-weight: 900;
+  margin: 0;
+  color: #1A1F2C;
+}
+
+.adm-inq-badge {
+  background: #1A1F2C;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.inq-master-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.adm-inq-search {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #E9ECEF;
+  border-radius: 12px;
+  padding: 10px 16px;
+  width: 320px;
+  box-shadow: 0 4px 10px rgba(26, 31, 44, 0.03);
+}
+
+.adm-inq-search input {
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.inq-master-pdf-btn {
+  background: #1A1F2C;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(26, 31, 44, 0.2);
+}
+
+.inq-master-pdf-btn:hover {
+  transform: translateY(-3px);
+  background: #1A1F2C;
+  box-shadow: 0 10px 20px rgba(26, 31, 44, 0.3);
+}
+
+.inq-master-pdf-btn span {
+  font-size: 15px;
+}
+
+.adm-inq-table-container {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(26, 31, 44, 0.04);
+  border: 1px solid #E9ECEF;
+}
+
+.adm-inq-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.adm-inq-table th {
+  padding: 16px;
+  background: #F8F9FA;
+  color: #6C757D;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #E9ECEF;
+  text-align: center;
+}
+
+.adm-inq-table td {
+  padding: 16px;
+  border-bottom: 1px solid #E9ECEF;
+  font-size: 14px;
+  vertical-align: middle;
+  text-align: center;
+  color: #1A1F2C;
+  font-weight: 700;
+}
+
+.adm-inq-name {
+  font-weight: 700;
+  color: #1A1F2C;
+}
+
+.adm-inq-email {
+  color: #475569;
+}
+
+.adm-inq-date {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.adm-inq-message {
+  max-width: 400px;
+}
+
+.adm-inq-message p {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #334155;
+}
+
+.adm-inq-delete-btn {
+  background: #1A1F2C;
+  color: #fff;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  margin: 0 auto;
+}
+
+.adm-inq-delete-btn:hover {
+  background: #1A1F2C;
+  transform: scale(1.05);
+}
+
+.adm-inq-empty {
+  padding: 40px;
+  text-align: center;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.adm-inq-loading {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.adm-notification-toast {
+  position: fixed;
+  top: 95px;
+  right: 25px;
+  width: 340px;
+  padding: 18px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 5002;
+  box-shadow: 0 15px 35px rgba(26, 31, 44, 0.25);
+  animation: slideInRight 0.4s ease-out;
+  overflow: hidden;
+}
+
+.adm-toast-top {
+  background: #1A1F2C !important;
+  color: #fff !important;
+}
+
+.adm-notification-toast.success-variant {
+  background: #0b1f5c !important;
+  color: #fff !important;
+}
+
+.adm-notification-toast.error-variant {
+  background: #0b1f5c !important;
+  color: #fff !important;
+}
+
+.adm-inq-toast-close {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.toast-timer-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #ffffff;
+}
+
+.run-5s {
+  animation: progressTimer 5s linear forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes progressTimer {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@media (max-width: 992px) {
+  .inq-master-controls {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .adm-inq-search {
+    width: 100%;
+    max-width: 100%;
+  }
+}

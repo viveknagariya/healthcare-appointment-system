@@ -1,0 +1,81 @@
+.pt-shell-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.pt-shell-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  width: 100%;
+}
+
+.pt-shell-middle {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  min-height: 0;
+}
+
+.pt-shell-main {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  padding: clamp(16px, 3vw, 30px);
+  background-color: #f8f9fa;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.pt-shell-footer {
+  z-index: 1100;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .pt-shell-main {
+    padding: clamp(14px, 2.5vw, 24px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .pt-shell-middle {
+    flex-direction: column;
+  }
+
+  .pt-shell-main {
+    padding: clamp(12px, 2vw, 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .pt-shell-main {
+    padding: clamp(10px, 2vw, 18px);
+    background-color: #f8f9fa;
+  }
+}
+
+@media (max-width: 640px) {
+  .pt-shell-main {
+    padding: clamp(8px, 2vw, 14px);
+  }
+}
+
+@media (max-width: 480px) {
+  .pt-shell-root {
+    overflow-x: hidden;
+  }
+
+  .pt-shell-main {
+    padding: 10px 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .pt-shell-main {
+    padding: 8px 6px;
+  }
+}

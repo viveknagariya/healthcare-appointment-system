@@ -1,0 +1,354 @@
+.adm-sidebar {
+  height: calc(100vh - 80px);
+  position: sticky;
+  top: 80px;
+  width: 260px;
+  flex-shrink: 0;
+  background: white;
+  border-right: 1px solid #E9ECEF;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  z-index: 100;
+  overflow-y: auto;
+  font-family: "Inter", sans-serif;
+}
+
+.adm-sidebar.open {
+  width: 260px;
+}
+
+.adm-sidebar.closed {
+  width: 80px;
+}
+
+.adm-sidebar-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.adm-logo-text {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #1A1F2C;
+  margin: 0;
+}
+
+.adm-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6C757D;
+  padding: 5px;
+}
+
+.adm-sidebar-nav {
+  flex: 1;
+  padding: 10px;
+}
+
+.adm-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 6px;
+  color: #6C757D;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.adm-nav-item:hover {
+  background: #1A1F2C;
+  color: #fff;
+}
+
+.adm-nav-item.active {
+  background: #1A1F2C;
+  color: #fff;
+}
+
+.adm-nav-label {
+  margin-left: 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.adm-sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid #E9ECEF;
+}
+
+.adm-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.adm-avatar {
+  width: 35px;
+  height: 35px;
+  background: #1A1F2C;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adm-user-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.adm-user-role {
+  font-size: 12px;
+  color: #6C757D;
+  margin: 0;
+}
+
+.adm-logout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  background: #1A1F2C;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.adm-logout-btn:hover {
+  background: #1A1F2C;
+  opacity: 0.9;
+}
+
+.adm-sidebar.closed .adm-nav-item,
+.adm-sidebar.closed .adm-logout-btn {
+  justify-content: center;
+  padding: 12px 0;
+}
+
+@media (max-width: 1200px) {
+  .adm-sidebar.open {
+    width: 240px;
+  }
+
+  .adm-sidebar.closed {
+    width: 75px;
+  }
+
+  .adm-nav-label {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 992px) {
+  .adm-sidebar {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    height: calc(100vh - 80px);
+    z-index: 99;
+    box-shadow: 0 10px 30px rgba(26, 31, 44, 0.1);
+  }
+
+  .adm-sidebar.open {
+    width: 220px;
+    transform: translateX(0);
+  }
+
+  .adm-sidebar.closed {
+    width: 0;
+    transform: translateX(-100%);
+    transition:
+      transform 0.3s ease,
+      width 0.3s ease;
+  }
+
+  .adm-sidebar-header {
+    padding: 15px;
+  }
+
+  .adm-logo-text {
+    font-size: 1.1rem;
+  }
+
+  .adm-sidebar-nav {
+    padding: 8px;
+  }
+
+  .adm-nav-item {
+    padding: 10px 12px;
+    margin-bottom: 3px;
+  }
+
+  .adm-nav-label {
+    font-size: 12px;
+    margin-left: 12px;
+  }
+
+  .adm-sidebar-footer {
+    padding: 15px;
+  }
+
+  .adm-user-info {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .adm-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .adm-user-name {
+    font-size: 13px;
+  }
+
+  .adm-user-role {
+    font-size: 11px;
+  }
+
+  .adm-logout-btn {
+    padding: 10px;
+    font-size: 13px;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .adm-sidebar {
+    display: none;
+  }
+
+  .adm-sidebar.open {
+    display: flex;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .adm-sidebar.closed {
+    display: none;
+  }
+
+  .adm-sidebar-header {
+    padding: 12px 15px;
+  }
+
+  .adm-logo-text {
+    font-size: 1rem;
+  }
+
+  .adm-nav-item {
+    padding: 8px 10px;
+    border-radius: 5px;
+  }
+
+  .adm-nav-label {
+    font-size: 11px;
+  }
+
+  .adm-sidebar-footer {
+    padding: 12px 15px;
+  }
+
+  .adm-user-info {
+    gap: 8px;
+  }
+
+  .adm-avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .adm-user-name {
+    font-size: 12px;
+  }
+
+  .adm-user-role {
+    font-size: 10px;
+  }
+
+  .adm-logout-btn {
+    padding: 9px;
+    font-size: 12px;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .adm-sidebar {
+    max-width: 100%;
+  }
+
+  .adm-sidebar.open {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .adm-sidebar-header {
+    padding: 10px 12px;
+  }
+
+  .adm-logo-text {
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+
+  .adm-sidebar-nav {
+    padding: 5px;
+  }
+
+  .adm-nav-item {
+    padding: 7px 8px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+  }
+
+  .adm-nav-label {
+    font-size: 10px;
+    margin-left: 10px;
+  }
+
+  .adm-sidebar-footer {
+    padding: 10px 12px;
+  }
+
+  .adm-user-info {
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .adm-avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+
+  .adm-user-name {
+    font-size: 11px;
+  }
+
+  .adm-user-role {
+    font-size: 9px;
+  }
+
+  .adm-logout-btn {
+    padding: 8px;
+    font-size: 11px;
+    gap: 5px;
+    border-radius: 5px;
+  }
+}

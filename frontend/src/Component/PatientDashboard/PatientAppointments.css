@@ -1,0 +1,344 @@
+.ptx-apt-page-wrapper {
+  background: white;
+  padding: clamp(14px, 2.5vw, 28px);
+  border-radius: clamp(8px, 2vw, 12px);
+  box-shadow: 0 4px 10px rgba(26, 31, 44, 0.05);
+  font-family: "Inter", sans-serif;
+}
+
+.ptx-apt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: clamp(14px, 2vw, 22px);
+  border-bottom: 2px solid #E9ECEF;
+  padding-bottom: clamp(10px, 1.5vw, 18px);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ptx-apt-header-left h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: clamp(16px, 3.5vw, 24px);
+}
+
+.ptx-apt-count {
+  font-size: clamp(11px, 2vw, 13px);
+  color: #6C757D;
+  margin-top: 5px;
+  display: block;
+}
+
+.ptx-apt-table-card {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ptx-master-table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+  min-width: 600px;
+}
+
+.ptx-master-table th,
+.ptx-master-table td {
+  padding: clamp(10px, 1.5vw, 18px);
+  text-align: center;
+  border-bottom: 1px solid #E9ECEF;
+  font-size: clamp(11px, 2vw, 14px);
+}
+
+.ptx-master-table th {
+  background: #F8F9FA;
+  color: #6C757D;
+  font-weight: 900;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.ptx-master-table td {
+  color: #1A1F2C;
+  font-weight: 700;
+}
+
+.ptx-master-table tr:hover {
+  background-color: #F8F9FA;
+}
+
+.ptx-master-table tr:active {
+  background-color: #F8F9FA;
+}
+
+.ptx-d-info {
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 1.5vw, 12px);
+  flex-wrap: wrap;
+}
+
+.ptx-d-name {
+  font-weight: 600;
+  color: #1A1F2C;
+  word-break: break-word;
+}
+
+.ptx-time-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #E9ECEF;
+  padding: clamp(3px, 0.8vw, 6px) clamp(6px, 1.2vw, 12px);
+  border-radius: 15px;
+  font-size: clamp(10px, 1.8vw, 12px);
+  color: #555;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.ptx-status-badge {
+  padding: clamp(4px, 0.8vw, 8px) clamp(8px, 1.5vw, 14px);
+  border-radius: 20px;
+  font-size: clamp(10px, 1.8vw, 12px);
+  font-weight: bold;
+  text-transform: capitalize;
+  display: inline-block;
+  text-align: center;
+  min-width: 60px;
+  white-space: nowrap;
+}
+
+.ptx-status-badge.approved {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.ptx-status-badge.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.ptx-status-badge.rejected,
+.ptx-status-badge.cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.ptx-empty {
+  text-align: center;
+  color: #6C757D;
+  padding: clamp(18px, 3vw, 32px);
+  font-size: clamp(12px, 2vw, 14px);
+}
+
+.ptx-loading {
+  text-align: center;
+  padding: clamp(28px, 4vw, 50px);
+  font-size: clamp(14px, 2.5vw, 18px);
+  font-weight: bold;
+  color: #6C757D;
+}
+
+.ptx-doc-note {
+  background: #fdf2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  padding: clamp(6px, 1.5vw, 12px);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 1vw, 10px);
+  font-size: clamp(11px, 2vw, 13px);
+  font-weight: 500;
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.ptx-doc-note svg {
+  flex-shrink: 0;
+  min-width: 16px;
+}
+
+.ptx-no-note {
+  color: #bbb;
+  font-size: clamp(12px, 2vw, 14px);
+}
+
+@media (max-width: 1024px) {
+  .ptx-apt-page-wrapper {
+    padding: clamp(12px, 2vw, 20px);
+  }
+
+  .ptx-master-table {
+    min-width: 550px;
+  }
+
+  .ptx-master-table th,
+  .ptx-master-table td {
+    padding: clamp(8px, 1.2vw, 14px);
+  }
+}
+
+@media (max-width: 768px) {
+  .ptx-apt-page-wrapper {
+    padding: clamp(10px, 2vw, 18px);
+    border-radius: 10px;
+  }
+
+  .ptx-apt-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .ptx-apt-header-left h2 {
+    font-size: clamp(18px, 3vw, 20px);
+  }
+
+  .ptx-master-table {
+    font-size: 12px;
+  }
+
+  .ptx-master-table th,
+  .ptx-master-table td {
+    padding: clamp(8px, 1.2vw, 12px);
+  }
+
+  .ptx-d-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .ptx-apt-page-wrapper {
+    padding: clamp(10px, 1.5vw, 14px);
+    border-radius: 8px;
+  }
+
+  .ptx-apt-header-left h2 {
+    font-size: clamp(16px, 2.5vw, 18px);
+  }
+
+  .ptx-master-table {
+    min-width: 500px;
+  }
+
+  .ptx-master-table th,
+  .ptx-master-table td {
+    padding: clamp(8px, 1vw, 10px);
+    font-size: clamp(10px, 1.5vw, 11px);
+  }
+
+  .ptx-doc-note {
+    max-width: 200px;
+    padding: clamp(6px, 1vw, 8px);
+    font-size: clamp(10px, 1.5vw, 11px);
+  }
+
+  .ptx-status-badge {
+    min-width: 55px;
+    padding: clamp(3px, 0.6vw, 5px) clamp(6px, 1vw, 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .ptx-apt-page-wrapper {
+    padding: clamp(8px, 1.2vw, 12px);
+    border-radius: 6px;
+  }
+
+  .ptx-apt-header {
+    gap: 8px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  .ptx-apt-header-left h2 {
+    font-size: clamp(14px, 2.2vw, 16px);
+    gap: 6px;
+  }
+
+  .ptx-master-table {
+    min-width: 450px;
+    font-size: 11px;
+  }
+
+  .ptx-master-table th,
+  .ptx-master-table td {
+    padding: clamp(6px, 0.8vw, 8px);
+    font-size: clamp(9px, 1.2vw, 10px);
+  }
+
+  .ptx-d-name {
+    font-size: clamp(9px, 1.5vw, 10px);
+  }
+
+  .ptx-time-badge {
+    font-size: clamp(8px, 1.2vw, 9px);
+    padding: 2px 6px;
+  }
+
+  .ptx-status-badge {
+    font-size: clamp(8px, 1.2vw, 9px);
+    min-width: 50px;
+    padding: 2px 6px;
+  }
+
+  .ptx-doc-note {
+    max-width: 180px;
+    padding: 5px;
+    font-size: clamp(9px, 1.2vw, 10px);
+    gap: 4px;
+  }
+
+  .ptx-empty,
+  .ptx-loading {
+    padding: clamp(12px, 2vw, 20px);
+    font-size: clamp(11px, 1.8vw, 12px);
+  }
+}
+
+@media (max-width: 360px) {
+  .ptx-apt-page-wrapper {
+    padding: 8px;
+  }
+
+  .ptx-apt-header {
+    flex-direction: column;
+    gap: 6px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
+
+  .ptx-apt-header-left h2 {
+    font-size: 13px;
+  }
+
+  .ptx-master-table {
+    min-width: 400px;
+  }
+
+  .ptx-master-table th,
+  .ptx-master-table td {
+    padding: 4px 6px;
+    font-size: 9px;
+  }
+
+  .ptx-doc-note {
+    max-width: 160px;
+    font-size: 8px;
+    padding: 4px;
+  }
+
+  .ptx-status-badge {
+    font-size: 8px;
+    padding: 2px 5px;
+  }
+}

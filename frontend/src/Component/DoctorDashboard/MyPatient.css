@@ -1,0 +1,264 @@
+.myp-wrapper {
+  padding: 25px;
+  font-family: "Inter", sans-serif;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.myp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.myp-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.myp-bold {
+  font-weight: 800;
+}
+
+.myp-master-action-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.myp-search input {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #E9ECEF;
+  width: 250px;
+  outline: none;
+  font-weight: 600;
+}
+
+.myp-master-pdf-btn {
+  background: #1A1F2C;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(26, 31, 44, 0.2);
+}
+
+.myp-master-pdf-btn:hover {
+  transform: translateY(-3px);
+  background: #1A1F2C;
+  box-shadow: 0 12px 25px rgba(26, 31, 44, 0.3);
+}
+
+.myp-master-pdf-btn span {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.myp-table-container {
+  background: #F8F9FA;
+  border-radius: 14px;
+  border: 1px solid #E9ECEF;
+  box-shadow: 0 4px 15px rgba(26, 31, 44, 0.04);
+  overflow: hidden;
+}
+
+.myp-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.myp-table th {
+  background: #F8F9FA;
+  padding: 16px 20px;
+  font-size: 12px;
+  color: #6C757D;
+  text-transform: uppercase;
+  border-bottom: 1px solid #E9ECEF;
+  text-align: center;
+  font-weight: 900;
+}
+
+.myp-table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid #f3f3f3;
+  font-size: 14px;
+  text-align: center;
+  color: #1A1F2C;
+  font-weight: 700;
+}
+
+.myp-table tr:hover {
+  background: #F8F9FA;
+}
+
+.myp-name {
+  font-weight: 800;
+  color: #1A1F2C;
+}
+
+.myp-status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.myp-status.pending {
+  background: #fff4e5;
+  color: #b93815;
+}
+.myp-status.approved {
+  background: #ecfdf3;
+  color: #027a48;
+}
+.myp-status.rejected {
+  background: #fef3f2;
+  color: #b42318;
+}
+
+.myp-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.myp-view-btn,
+.myp-delete-btn {
+  background: #1A1F2C;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.myp-view-btn:hover,
+.myp-delete-btn:hover {
+  background: #1A1F2C;
+  transform: scale(1.05);
+}
+
+.adm-notification-toast {
+  position: fixed;
+  top: 95px;
+  right: 25px;
+  width: 340px;
+  padding: 18px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 3000;
+  box-shadow: 0 15px 35px rgba(26, 31, 44, 0.25);
+  animation: slideInRight 0.4s ease-out;
+  overflow: hidden;
+  background: #1A1F2C;
+  color: #fff;
+}
+
+.myp-toast-close {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.myp-empty-cell {
+  text-align: center;
+  padding: 20px;
+}
+
+.toast-timer-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #ffffff;
+}
+
+.run-5s {
+  animation: progressTimer 5s linear forwards;
+}
+
+.myp-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 31, 44, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5002;
+}
+
+.myp-modal-content {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 380px;
+  box-shadow: 0 20px 40px rgba(26, 31, 44, 0.1);
+}
+
+.myp-modal-name {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.myp-close-btn {
+  padding: 10px 24px;
+  border: none;
+  background: #1A1F2C;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes progressTimer {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@media (max-width: 900px) {
+  .myp-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+  .myp-master-action-group {
+    flex-direction: column;
+  }
+  .myp-search input {
+    width: 100%;
+    max-width: none;
+  }
+  .myp-master-pdf-btn {
+    justify-content: center;
+  }
+}

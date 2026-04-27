@@ -1,0 +1,302 @@
+.adm-lp-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url("../../images/img6.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.adm-lp-container {
+  max-width: 550px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(25px);
+  padding: 60px 50px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 25px 60px rgba(26, 31, 44, 0.15);
+  z-index: 100;
+}
+
+.adm-lp-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.adm-lp-header-icon {
+  margin: 0 auto;
+}
+
+.adm-lp-title {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #1A1F2C;
+  margin: 12px 0 5px;
+}
+
+.adm-lp-subtext {
+  font-size: 16px;
+  color: #6C757D;
+  font-weight: 600;
+}
+
+.adm-lp-input-group {
+  margin-bottom: 25px;
+}
+
+.adm-lp-label {
+  display: block;
+  font-weight: 800;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #1A1F2C;
+  text-align: left;
+}
+
+.adm-lp-control input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(26, 31, 44, 0.1);
+  font-weight: 900;
+  font-size: 18px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  color: #1A1F2C;
+}
+
+.adm-lp-control input::placeholder {
+  color: #6C757D;
+}
+
+.adm-lp-submit-btn {
+  width: 100%;
+  padding: 18px;
+  background: #1A1F2C;
+  color: #fff;
+  border-radius: 14px;
+  font-weight: 900;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  transition:
+    transform 0.2s,
+    background 0.3s;
+  margin-top: 15px;
+}
+
+.adm-lp-toast {
+  position: fixed;
+  top: 95px;
+  right: 25px;
+  width: 340px;
+  padding: 18px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 10000;
+  box-shadow: 0 15px 35px rgba(26, 31, 44, 0.25);
+  animation: slideInRight 0.4s ease-out;
+  overflow: hidden;
+  background: #0b1f5c !important;
+  color: #fff !important;
+}
+
+.adm-lp-toast-close {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.toast-timer-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: #ffffff;
+  width: 100%;
+}
+
+.run-5s {
+  animation: progressTimer 5s linear forwards;
+}
+
+@keyframes progressTimer {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .adm-lp-container {
+    max-width: 90%;
+    padding: 50px 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .adm-lp-wrapper {
+    background-attachment: scroll;
+  }
+
+  .adm-lp-container {
+    max-width: 100%;
+    padding: 45px 35px;
+    border-radius: 24px;
+  }
+
+  .adm-lp-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .adm-lp-subtext {
+    font-size: 15px;
+  }
+
+  .adm-lp-label {
+    font-size: 15px;
+  }
+
+  .adm-lp-control input {
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .adm-lp-submit-btn {
+    padding: 16px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .adm-lp-wrapper {
+    padding: 15px;
+    min-height: 100vh;
+  }
+
+  .adm-lp-container {
+    max-width: 100%;
+    padding: 40px 25px;
+    border-radius: 20px;
+  }
+
+  .adm-lp-title {
+    font-size: 28px;
+    margin: 10px 0 3px;
+  }
+
+  .adm-lp-subtext {
+    font-size: 14px;
+  }
+
+  .adm-lp-input-group {
+    margin-bottom: 20px;
+  }
+
+  .adm-lp-label {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .adm-lp-control input {
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 12px;
+  }
+
+  .adm-lp-submit-btn {
+    padding: 14px;
+    font-size: 15px;
+    border-radius: 12px;
+  }
+
+  .adm-lp-toast {
+    width: calc(100% - 30px);
+    right: 15px;
+    top: 85px;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .adm-lp-wrapper {
+    padding: 10px;
+  }
+
+  .adm-lp-container {
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(26, 31, 44, 0.1);
+  }
+
+  .adm-lp-title {
+    font-size: 24px;
+    margin: 8px 0 2px;
+  }
+
+  .adm-lp-subtext {
+    font-size: 13px;
+  }
+
+  .adm-lp-input-group {
+    margin-bottom: 16px;
+  }
+
+  .adm-lp-label {
+    font-size: 13px;
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+
+  .adm-lp-control input {
+    padding: 11px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  .adm-lp-control input::placeholder {
+    font-size: 13px;
+  }
+
+  .adm-lp-submit-btn {
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-top: 12px;
+  }
+
+  .adm-lp-toast {
+    width: calc(100% - 20px);
+    right: 10px;
+    top: 75px;
+    padding: 14px;
+    font-size: 13px;
+  }
+}

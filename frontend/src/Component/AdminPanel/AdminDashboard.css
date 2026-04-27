@@ -1,0 +1,375 @@
+.adm-main-layout {
+  display: flex;
+  background-color: #f4f7f6;
+  min-height: 100vh;
+}
+
+.adm-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.adm-db-wrapper {
+  font-family: "Inter", sans-serif;
+}
+
+.adm-db-header {
+  margin-bottom: 28px;
+}
+
+.adm-db-header h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1A1F2C;
+  margin: 0;
+}
+
+.adm-db-header p {
+  font-size: 13px;
+  color: #6C757D;
+  margin: 4px 0 0;
+}
+
+.adm-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.adm-stat-card {
+  background: #FFFFFF;
+  padding: 22px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #E9ECEF;
+  transition: 0.25s;
+  box-shadow: 0 2px 8px rgba(26, 31, 44, 0.04);
+}
+
+.adm-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(26, 31, 44, 0.08);
+}
+
+.adm-stat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.adm-stat-icon-patients {
+  background-color: #eef2ff;
+}
+
+.adm-stat-icon-doctors {
+  background-color: #f0fdf4;
+}
+
+.adm-stat-icon-appointments {
+  background-color: #fff7ed;
+}
+
+.adm-stat-icon-pending {
+  background-color: #fef2f2;
+}
+
+.adm-stat-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #6C757D;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.adm-stat-info h3 {
+  margin: 4px 0 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #1A1F2C;
+}
+
+.adm-charts-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.4fr;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.adm-chart-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 22px;
+  border: 1px solid #E9ECEF;
+  box-shadow: 0 2px 8px rgba(26, 31, 44, 0.04);
+  min-width: 0;
+}
+
+.adm-chart-wide {
+  grid-column: span 1;
+}
+
+.adm-chart-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1A1F2C;
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f4f4f4;
+}
+
+@media (max-width: 1200px) {
+  .adm-content {
+    padding: 25px;
+  }
+
+  .adm-db-header h1 {
+    font-size: 24px;
+  }
+
+  .adm-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 22px;
+  }
+
+  .adm-stat-card {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .adm-stat-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .adm-stat-info h3 {
+    font-size: 24px;
+  }
+
+  .adm-charts-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .adm-chart-wide {
+    grid-column: span 2;
+  }
+
+  .adm-chart-card {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .adm-main-layout {
+    flex-direction: column;
+  }
+
+  .adm-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 0;
+  }
+
+  .adm-db-header {
+    margin-bottom: 20px;
+  }
+
+  .adm-db-header h1 {
+    font-size: 22px;
+  }
+
+  .adm-db-header p {
+    font-size: 12px;
+  }
+
+  .adm-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .adm-stat-card {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .adm-stat-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .adm-stat-info h3 {
+    font-size: 22px;
+  }
+
+  .adm-charts-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .adm-chart-wide {
+    grid-column: span 1;
+  }
+
+  .adm-chart-card {
+    padding: 16px;
+  }
+
+  .adm-chart-title {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .adm-content {
+    padding: 16px;
+  }
+
+  .adm-db-header {
+    margin-bottom: 16px;
+  }
+
+  .adm-db-header h1 {
+    font-size: 20px;
+  }
+
+  .adm-db-header p {
+    font-size: 11px;
+    margin-top: 3px;
+  }
+
+  .adm-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .adm-stat-card {
+    padding: 14px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .adm-stat-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .adm-stat-info p {
+    font-size: 11px;
+  }
+
+  .adm-stat-info h3 {
+    font-size: 20px;
+    margin-top: 3px;
+  }
+
+  .adm-charts-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .adm-chart-card {
+    padding: 14px;
+  }
+
+  .adm-chart-title {
+    font-size: 13px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .adm-content {
+    padding: 12px;
+  }
+
+  .adm-db-wrapper {
+    font-family: "Inter", sans-serif;
+  }
+
+  .adm-db-header {
+    margin-bottom: 12px;
+  }
+
+  .adm-db-header h1 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .adm-db-header p {
+    font-size: 10px;
+    margin: 2px 0 0 0;
+    color: #6C757D;
+  }
+
+  .adm-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .adm-stat-card {
+    padding: 12px;
+    gap: 8px;
+    justify-content: space-between;
+  }
+
+  .adm-stat-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .adm-stat-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .adm-stat-info {
+    flex: 1;
+  }
+
+  .adm-stat-info p {
+    font-size: 10px;
+    margin: 0;
+  }
+
+  .adm-stat-info h3 {
+    font-size: 18px;
+    margin: 3px 0 0 0;
+  }
+
+  .adm-charts-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .adm-chart-card {
+    padding: 12px;
+  }
+
+  .adm-chart-wide {
+    grid-column: span 1;
+  }
+
+  .adm-chart-title {
+    font-size: 12px;
+    margin: 0 0 8px 0;
+    padding-bottom: 6px;
+    border-bottom: 1.5px solid #f4f4f4;
+  }
+}

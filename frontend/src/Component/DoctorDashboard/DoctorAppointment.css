@@ -1,0 +1,487 @@
+:root {
+  --appointmentListBgColor: #f8f9fa;
+  --appointmentListWhiteColor: #ffffff;
+  --appointmentListDarkColor: #1A1F2C;
+  --appointmentListMutedColor: #64748b;
+  --appointmentListBorderColor: #E9ECEF;
+  --appointmentListShadow: 0 4px 12px rgba(26, 31, 44, 0.05);
+  --appointmentListRadius: 12px;
+}
+
+.appointmentListWrapper {
+  padding: 30px;
+  background-color: var(--appointmentListBgColor);
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+.appointmentListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
+.appointmentListHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.appointmentListHeaderLeft h2 {
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.appointmentCountBadge {
+  background: #1A1F2C;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.appointmentListHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.downloadPdfButton,
+.dateFilterButton {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #1A1F2C 0%, #1A1F2C 100%);
+  color: #fff;
+  border: none;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(26, 31, 44, 0.2);
+}
+
+.downloadPdfButton {
+  padding: 0 24px;
+  cursor: pointer;
+  font-weight: 900;
+  gap: 10px;
+}
+
+.downloadPdfButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(26, 31, 44, 0.3);
+}
+
+.dateFilterButton {
+  position: relative;
+  padding: 0 15px;
+}
+
+.filterIconSpacing {
+  margin-right: 10px;
+}
+
+.dateFilterButton input {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: 800;
+  outline: none;
+  cursor: pointer;
+}
+
+.dateFilterButton input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.appointmentSearchBar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid var(--appointmentListBorderColor);
+  border-radius: 10px;
+  padding: 8px 12px;
+  height: 48px;
+}
+
+.appointmentSearchBar input {
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.appointmentTableCard {
+  background: white;
+  border-radius: var(--appointmentListRadius);
+  overflow: hidden;
+  box-shadow: var(--appointmentListShadow);
+  border: 1px solid var(--appointmentListBorderColor);
+}
+
+.appointmentTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.appointmentTable th {
+  text-align: center;
+  padding: 16px;
+  font-size: 12px;
+  color: #6C757D;
+  background: #F8F9FA;
+  border-bottom: 1px solid var(--appointmentListBorderColor);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 900;
+}
+
+.appointmentTable td {
+  padding: 16px;
+  border-bottom: 1px solid var(--appointmentListBorderColor);
+  font-size: 14px;
+  text-align: center;
+  color: #1A1F2C;
+  font-weight: 700;
+}
+
+.patientInfoContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.patientNameText {
+  font-weight: 700;
+  margin: 0;
+}
+
+.patientPhoneText {
+  font-size: 12px;
+  color: var(--appointmentListMutedColor);
+  margin: 0;
+}
+
+.appointmentDateCell strong {
+  display: block;
+  font-size: 14px;
+}
+
+.appointmentDateCell span {
+  font-size: 12px;
+  color: var(--appointmentListMutedColor);
+}
+
+.statusBadge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.statusBadge.pending {
+  background: #fff4e5;
+  color: #b93815;
+}
+
+.statusBadge.approved {
+  background: #ecfdf3;
+  color: #027a48;
+}
+
+.statusBadge.rejected {
+  background: #fef3f2;
+  color: #b42318;
+}
+
+.instructionsBox {
+  background: #FFFFFF;
+  padding: 8px 35px 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #E9ECEF;
+  position: relative;
+  min-width: 150px;
+  max-width: 250px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.instructionsText {
+  font-size: 13px;
+  color: #334155;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.instructionsEmpty {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.instructionsEditButton {
+  position: absolute;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background: #1e293b;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.actionButtonsGroup {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.acceptButton {
+  background: #1A1F2C;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rejectButton {
+  background: white;
+  border: 1px solid #E9ECEF;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.deleteButton {
+  background: #fff1f2;
+  color: #e11d48;
+  border: 1px solid #fecdd3;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.deleteButton:hover {
+  background: #e11d48;
+  color: white;
+}
+
+.processedStatus {
+  color: #039855;
+  font-weight: 600;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.toastNotification {
+  position: fixed;
+  top: 95px;
+  right: 25px;
+  width: 340px;
+  padding: 18px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 10000;
+  box-shadow: 0 15px 35px rgba(26, 31, 44, 0.25);
+  animation: toastSlideInAnimation 0.4s ease-out;
+  color: #ffffff;
+  overflow: hidden;
+  background: #1A1F2C;
+}
+
+.toastCloseButton {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.toastError {
+  background: #991b1b;
+}
+
+.toastTimerLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.toastTimerAnimation {
+  animation: toastProgressTimerAnimation 5s linear forwards;
+}
+
+@keyframes toastSlideInAnimation {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toastProgressTimerAnimation {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.instructionsModalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 31, 44, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5002;
+  backdrop-filter: blur(2px);
+}
+
+.instructionsModalCard {
+  background: white;
+  width: 380px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(26, 31, 44, 0.15);
+}
+
+.instructionsModalHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.instructionsModalHeader h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.instructionsModalCloseButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--appointmentListMutedColor);
+}
+
+.instructionsModalBody label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  font-weight: 800;
+  color: #1A1F2C;
+}
+
+.instructionsModalBody textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  border: 1px solid var(--appointmentListBorderColor);
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  resize: none;
+  font-weight: 900;
+  color: #1A1F2C;
+}
+
+.instructionsModalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.instructionsModalCancelButton {
+  background: #E9ECEF;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.instructionsModalSaveButton {
+  background: #1A1F2C;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .appointmentListHeaderRight {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+}
+
+.appointmentLoadingIndicator {
+  padding: 30px;
+  text-align: center;
+  font-size: 18px;
+  color: var(--appointmentListMutedColor);
+  background-color: var(--appointmentListBgColor);
+  min-height: 100vh;
+}
+
+.emptyAppointmentMessage {
+  text-align: center;
+  padding: 40px !important;
+  color: var(--appointmentListMutedColor);
+  font-weight: 600;
+}
+
+.instructionsModalCharacterCount {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--appointmentListMutedColor);
+  text-align: right;
+}

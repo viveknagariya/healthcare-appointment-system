@@ -1,0 +1,22 @@
+.adm-layout-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.adm-layout-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+}
+
+.adm-layout-middle {
+  display: flex;
+  flex: 1;
+}
+
+.adm-layout-main {
+  flex: 1;
+  padding: 30px;
+  background-color: #f8f9fa;
+}

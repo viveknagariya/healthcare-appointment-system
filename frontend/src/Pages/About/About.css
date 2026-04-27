@@ -1,0 +1,278 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.mq-v3-root {
+  width: 100%;
+  background: #F8F9FA;
+  color: #1A1F2C;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.mq-v3-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mq-v3-row {
+  width: 100%;
+  padding: 60px 0;
+  display: block;
+}
+
+.mq-v3-row:nth-of-type(even) {
+  background: #F8F9FA;
+  border-top: 1px solid #E9ECEF;
+  border-bottom: 1px solid #E9ECEF;
+}
+
+
+.mq-v3-hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.mq-v3-title {
+  font-size: 62px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.mq-v3-subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #6C757D;
+  line-height: 1.7;
+  max-width: 550px;
+  margin-bottom: 35px;
+}
+
+.mq-v3-rect-img {
+  width: 480px;
+  height: 400px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 12px solid #F8F9FA;
+  box-shadow: 0 25px 50px rgba(26, 31, 44, 0.08);
+}
+
+.mq-v3-rect-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.mq-v3-btn-oval {
+  display: inline-flex;
+  padding: 16px 38px;
+  background: #1A1F2C;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 800;
+  border: 2px solid #1A1F2C;
+  transition: all 0.3s ease;
+}
+
+.mq-v3-btn-oval:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(26, 31, 44, 0.15);
+}
+
+.mq-v3-btn-light {
+  background: #fff;
+  color: #1A1F2C;
+}
+
+.mq-v3-hero-actions {
+  display: flex;
+  gap: 20px;
+}
+
+.mq-v3-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mq-v3-section-title {
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.mq-v3-section-subtitle {
+  font-weight: 700;
+  color: #6C757D;
+}
+
+
+.mq-v3-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.mq-v3-service-card {
+  background: #FFFFFF;
+  padding: 35px;
+  border-radius: 24px;
+  border: 1px solid #1A1F2C;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  will-change: transform;
+}
+
+.mq-v3-service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(26, 31, 44, 0.08);
+}
+
+.mq-v3-service-title {
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.mq-v3-service-desc {
+  font-size: 15px;
+  font-weight: 600;
+  color: #6C757D;
+  line-height: 1.5;
+}
+
+
+.mq-v3-step-card {
+  background: #FFFFFF;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #1A1F2C;
+  text-align: center;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  will-change: transform;
+}
+
+.mq-v3-step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(26, 31, 44, 0.08);
+}
+
+.mq-v3-steps-title {
+  font-size: 34px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mq-v3-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.mq-v3-step-number {
+  font-size: 14px;
+  font-weight: 900;
+  color: #bbb;
+}
+
+.mq-v3-step-title {
+  margin: 15px 0;
+  font-weight: 900;
+}
+
+.mq-v3-step-desc {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6C757D;
+}
+
+.mq-v3-care-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.mq-v3-care-title {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.mq-v3-care-text {
+  font-weight: 700;
+  color: #6C757D;
+  line-height: 1.7;
+}
+
+.mq-v3-care-points {
+  margin-top: 25px;
+}
+
+.mq-v3-care-point {
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.mq-v3-care-image {
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(26, 31, 44, 0.1);
+}
+
+
+.mq-v3-cta-box {
+  background: #1A1F2C;
+  color: #fff;
+  padding: 60px;
+  border-radius: 40px;
+  text-align: center;
+}
+
+.mq-v3-cta-box h2 {
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.mq-v3-cta-section {
+  padding-bottom: 100px;
+}
+
+.mq-v3-cta-text {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  opacity: 0.8;
+}
+
+
+@media (max-width: 992px) {
+  .mq-v3-hero-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mq-v3-care-grid,
+  .mq-v3-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mq-v3-rect-img {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+  }
+
+  .mq-v3-grid-6 {
+    grid-template-columns: 1fr;
+  }
+}
